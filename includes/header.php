@@ -14,7 +14,9 @@
 
 <header class="header">
   <div class="header-left">
+     <a href="index.php">
     <img src="../img/logo.jpg" alt="Logo" class="logo">
+</a>
   </div>
 
   <nav class="menu">
