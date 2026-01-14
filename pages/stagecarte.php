@@ -34,13 +34,17 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
         <!-- Afficher les stages--> 
             <div class="carte">
                 <img src="<?php echo $unStage->getImage(); ?>" alt="Affiche du stage" />
-                <h3><?php echo $unStage->getNom(); ?></h3>
-                <p>Horaires : <?php echo $unStage->getHoraires(); ?></p> 
-                <p>Tarif : <?php echo $unStage->getTarif(); ?> €</p>
-                <p>Lieu : 
-                    <?php echo $lieu->getNomLieu(); ?>, 
+                <h3> · <?php echo $unStage->getNom(); ?></h3>
+
+                <?php if ($unStage->getDateDebut()===$unStage->getDateFin()) {?>
+                    Le <?php echo $unStage->getDateDebut();
+                } 
+                else { ?>
+                    Du <?php echo $unStage->getDateDebut(); ?> au <?php echo $unStage->getDateFin(); 
+                }?>
+                </p> 
+                <p> 
                     <?php echo $lieu->getVille(); ?>, 
-                    <?php echo $lieu->getCodePostale(); ?>
                 </p>
             </div>
         </a>
