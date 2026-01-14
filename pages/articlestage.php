@@ -58,7 +58,7 @@ if(isset($_GET['id'])){
         
         foreach ($animateursStage as $animateur) {
             //Afficher nom et niveau de l'animateur
-            echo $animateur->getNomAnimateur() . " (" . $animateur->getNiveauAnimateur().").";    
+            echo $animateur->getNomAnimateur() . " (" . $animateur->getNiveauAnimateur().")";    
             
             
             //Mettre une virgule si il reste + de 2 animateurs a afficher  
