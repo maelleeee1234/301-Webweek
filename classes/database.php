@@ -1,7 +1,7 @@
 <!-- CLASSE DATABASE -->
 
 <?php
-include_once ('./config/connexionBDD.php');
+include_once ('../config/connexionBDD.php');
 
 class Database {
 

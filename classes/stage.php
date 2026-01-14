@@ -8,9 +8,9 @@ class Stage{
     private $dateDebut;
     private $dateFin;
     private $horaires;
-    private $tarif;
+    private $tarifs;
     private $image;
-    private $idLieu
+    private $idLieu;
 
     public function getId() { 
         return $this->idStage; 
@@ -28,7 +28,7 @@ class Stage{
         return $this->horaires; 
     }
     public function getTarif() { 
-        return $this->tarif; 
+        return $this->tarifs; 
     }
     public function getImage() { 
         return $this->image; 
@@ -44,7 +44,6 @@ class Stage{
     }
 
     public function supprimerStage(){
-}
     }
 }
 ?>

@@ -15,10 +15,10 @@ class Lieu {
         return $this->nomLieu; 
     }
     public function getCodePostale(){ 
-        return $this->$codePostale; 
+        return $this->codePostale; 
     }
     public function getVille(){ 
-        return $this->$ville; 
+        return $this->ville; 
     }
 }
 ?>
