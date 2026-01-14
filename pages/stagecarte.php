@@ -1,17 +1,14 @@
 <?php 
 include_once '../classes/database.php';
 include_once '../classes/stage.php';
+include_once '../classes/lieu.php';
 
 //Faire appel à la classe database
 $db = database::getInstance('aikido'); 
 
-// Requete pour récupérer le stage 
-$sql = "SELECT * FROM stage";
-    
-$resultats = $db->getObjects($sql, 'Stage', []);
+// Requete pour récupérer tout les stages et leurs infos
+$stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,20 +19,32 @@ $resultats = $db->getObjects($sql, 'Stage', []);
 </head>
 <body>
     <main>
-      <!-- Afficher chacuns des stages-->
-      <?php foreach ($resultats as $unStage) : ?>
-       <div class="carte">
-            <!-- rediriger vers le stage en fonction de l'id-->
-            <a href="stagecarte.php?id=<?php echo $unStage->getId(); ?>">
+      <?php foreach ($stages as $unStage) : ?>
+        <?php 
+            // Récupérer le lieu associé à chacun des stages afficher (avec la classe lieu)
+            $idLieu = $unStage->getIdLieu();
+            //Recuperer les infos du lieu en fonction de l'id sur la BDD
+            $resultatsLieu = $db->getObjects("SELECT * FROM lieu WHERE idLieu = " . $unStage->getIdLieu(), 'Lieu', []);
+            $lieu = $resultatsLieu[0];
+        ?>
+        
+        <!-- Lien pour rediriger vers le stage en détail en fonction de l'id-->
+        <a href="articlestage.php?id=<?php echo $unStage->getId(); ?>">
+            
+        <!-- Afficher les stages--> 
+            <div class="carte">
                 <img src="<?php echo $unStage->getImage(); ?>" alt="Affiche du stage" />
-            </a>
-            <h3><?php echo $unStage->getNom(); ?></h3>
-            <p>Ville : <?php echo $unStage->getHoraires(); ?></p> 
-            <p>Tarif : <?php echo $unStage->getTarif(); ?> €</p>
-        </div>
+                <h3><?php echo $unStage->getNom(); ?></h3>
+                <p>Horaires : <?php echo $unStage->getHoraires(); ?></p> 
+                <p>Tarif : <?php echo $unStage->getTarif(); ?> €</p>
+                <p>Lieu : 
+                    <?php echo $lieu->getNomLieu(); ?>, 
+                    <?php echo $lieu->getVille(); ?>, 
+                    <?php echo $lieu->getCodePostale(); ?>
+                </p>
+            </div>
+        </a>
       <?php endforeach; ?>
-    </main>
-    </main>
-    
+    </main> 
 </body>
 </html>
