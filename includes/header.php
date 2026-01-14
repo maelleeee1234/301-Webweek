@@ -8,12 +8,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Accueil</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
 
 <header class="header">
-  <div class="header-left">
+  <div class="header-droit">
      <a href="index.php">
     <img src="../img/logo.jpg" alt="Logo" class="logo">
 </a>
@@ -26,9 +26,9 @@
     <a href="histoire.php">Histoire</a>
   </nav>
 
-  <div class="header-droite">
+  <div class="header-droit">
     <span class="phone">06-10-90-24-32</span>
-    <a href="contact.html" class="contact">Contact</a>
+    <a href="contact.php" class="contact">Contact</a>
   </div>
 </header>
 
