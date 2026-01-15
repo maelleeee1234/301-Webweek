@@ -1,4 +1,8 @@
-/* HEADER */
+@font-face {
+    font-family: "sigokae";
+    src: url("fonts/sigokae.otf") format("otf");
+    /* HEADER */
+}
 body {
     font-family: Arial, sans-serif;
 }
@@ -24,20 +28,21 @@ body {
 }
 
 .menu a {
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 20px;
+  color: black;
+  text-decoration: none;
+  padding: 8px 16px;
+  background-image: linear-gradient(#2f4f5f, #2f4f5f);
+  background-size: 0% 3px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease, color 0.3s ease;
 }
 
 .menu a:hover {
-    background-color: #2f4f5f;
-    border-radius: 20px;
-    color: white;
-    padding: 8px 16px;
+  color: #2f4f5f;
+  background-size: 100% 3px;
 }
+
 
 /* ZONE DROITE */
 .header-droit {
@@ -51,7 +56,6 @@ body {
     background-color: #2f4f5f;
     color: white;
     padding: 8px 14px;
-    border-radius: 20px;
 }
 
 /* BOUTON CONTACT */
@@ -59,7 +63,6 @@ body {
     background-color: #2f4f5f;
     color: white;
     padding: 8px 18px;
-    border-radius: 20px;
 }
 
 
@@ -87,13 +90,11 @@ body {
     font-size: 14px;
 
 }
-
-
 h3 {
-    font-family: 30px;
     text-align: center;
     justify-content: space-around;
 }
+
 .fondateur-contenu {
     display: flex;
     gap: 40px;
@@ -112,13 +113,13 @@ text-align:justify;
 text-align:justify;
 }
 
-/* ===== GRADES – DESIGN SOBRE NOIR & BLANC AVEC HOVER ===== */
+/* Cartes */
 
 .grades-section {
     margin: 80px 0;
 }
 
-/* Grille : 6 cartes sur une ligne */
+/* Grille */
 .grade-grille {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -129,18 +130,17 @@ text-align:justify;
 
 /* Carte */
 .carte {
-    background-color: #000; /* fond noir */
-    color: #fff; /* texte blanc */
+    background-color: #000; 
+    color: #fff; 
     border: 1px solid #000;
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 260px;
     transition: all 0.3s ease; /* transition pour hover */
 }
 
-/* Hover : fond blanc, texte noir, léger zoom */
+/* Hover */
 .carte:hover {
     background-color: #fff;
     color: #000;
@@ -154,13 +154,10 @@ text-align:justify;
 
 .carte-header h3 {
     font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     font-weight: bold;
 }
 
 /* Texte */
 .carte-body p {
     font-size: 14px;
-    line-height: 1.6;
 }
