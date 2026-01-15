@@ -4,12 +4,13 @@
     /* HEADER */
 }
 body{
-    display: flex;
+    display:flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    font-family: Arial, sans-serif;
 }
-
+/*contact*/
 label{
     text-align: left;
     align-items: left;
@@ -39,9 +40,6 @@ button {
     gap: 10px;
 }
 /* HEADER */
-body {
-    font-family: Arial, sans-serif;
-}
 
 .header {
     display: flex;
@@ -67,6 +65,19 @@ body {
 }
 
 .menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #2f4f5f;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 16px;
   color: black;
   text-decoration: none;
   padding: 8px 16px;
@@ -95,6 +106,7 @@ body {
     background-color: #2f4f5f;
     color: white;
     padding: 8px 14px;
+    border-radius: 5px;
 }
 
 /* BOUTON CONTACT */
@@ -102,6 +114,7 @@ body {
     background-color: #2f4f5f;
     color: white;
     padding: 8px 18px;
+    border-radius: 5px;
 }
 
 /* PAGE HISTOIRE */
@@ -262,3 +275,29 @@ text-align:justify;
 .carte-body p {
     font-size: 14px;
 }
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.cartestage{
+    background-color: lightgrey;
+    text-align: left;
+} 
+
+.cartestage h3 {
+    text-align: left;
+    color: black;
+    text-decoration: none;
+}
+
+.cartestage p {
+    color:#000;
+    text-decoration: none;
+}
+
+
