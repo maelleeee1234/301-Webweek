@@ -197,7 +197,7 @@ footer {
   width: 32px;
   height: auto;
 }
-}
+
 
 /* PAGE HISTOIRE */
 .histoire {
@@ -242,8 +242,87 @@ text-align:justify;
 text-align:justify;
 }
 
-/* Cartes */
+/* PAGE COURS */
+.texte_asso{
+    width: 80%;
+    text-align: justify
+}
 
+.container{
+    width: 100%;
+}
+
+.image-cours{
+    display: flex;
+    height: 300px;
+    width: auto;
+    justify-content: flex-start;
+    margin-left: 143px;
+}
+.info-cours {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Inversion pour Horaires (image à gauche) */
+.horaires-cours {
+    flex-direction: row-reverse;
+}
+
+/* Textes */
+.thomas-gavory-cours p,
+.horaires-cours p,
+.Dojo-Quincieu p {
+    max-width: 500px;
+    line-height: 1.4;
+    text-align:justify;
+
+}
+
+/* Titres */
+.thomas-gavory-cours h3,
+.horaires-cours h3,
+.Dojo-Quincieu h2 {
+    margin-bottom: 10px;
+}
+/* Images */
+.thomas-gavory-cours img,
+.horaires-cours img,
+.Dojo-Quincieu img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.tarifs {
+    width: 90%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.tarifs > p {
+    max-width: 900px;
+    margin: 40px auto 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* S'nscrire */
+
+.btn-inscription {
+    display: inline-block;
+    margin: 40px auto;
+    padding: 10px 20px;
+    background-color: #2f4f5f;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+
+/* Cartes */
 .grades-section {
     margin: 80px 0;
 }
@@ -259,8 +338,21 @@ text-align:justify;
 
 /* Carte */
 .carte {
-    background-color: #000; 
     color: #fff; 
+}
+
+.carte h2,
+.carte p {
+    color: #fff;
+}
+
+/* Quand hover → texte noir */
+.carte:hover h2,
+.carte:hover p {
+    color: #000;
+}
+.carte {
+    background-color: #000; 
     border: 1px solid #000;
     padding: 30px 20px;
     display: flex;

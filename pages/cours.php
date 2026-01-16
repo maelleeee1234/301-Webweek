@@ -1,3 +1,4 @@
+<?php include '../includes/header.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,26 +7,24 @@
     <title>Cours</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<?php include 'header.php'; ?>
+
 <body>
    <h1>AÏKIDO Le-Puy-en-Velay </h1>
-   <p>L’association Aïkido Le Puy-en-Velay propose des cours d’aïkido pour adultes et adolescents à partir de 12 ans, au dojo de Quincieu (1, avenue de Bonneville, 43000 Aiguilhe). <br> Les cours sont assurés par Thomas Gavory.
+   <div class="texte_asso">
+   <p>L’association Aïkido Le Puy-en-Velay propose des cours d’aïkido pour adultes et adolescents à partir de 12 ans, au Dojo de Quincieu (1, avenue de Bonneville, 43000 Aiguilhe). Les cours sont assurés par Thomas Gavory, enseignant diplômé d’État, et s’adressent aussi bien aux débutants qu’aux pratiquants confirmés. Les séances se déroulent dans un esprit de partage et de respect, avec des groupes où tous les niveaux sont mélangés afin de favoriser l’apprentissage et la transmission entre les aïkidokas.
 </p> 
-<div class="thomas-gavory-cours">
+</div>
+<div class="container">
+<img class="image-cours" src="../img/Cours_prise.png" alt="Cours prise">
+<div class="info-cours">
     <h3>Thomas Gavory</h2>
-    <p>6ème DAN d'Aïkido.<br>Diplômé d'État.</p>
-    <img src="../img/Thomas_Gavory.png" alt="Thomas Gavory"> 
-</div>
-<div class="horraires-cours">
-    <h3> Horraires: </h2>
+    <p>6ème DAN d'Aïkido.<br>Diplômé d'État.</p> 
+    <h3> Horaires: </h2>
     <p>Mardi 19h-21h <br>Jeudi 19h-21h</p>
-    <img src="../img/Cours.png" alt="img cours d'aikido">
-</div>
-<div class="Dojo-Quincieu">
-    <h2> Dojo Qunincieu </h2>
-    <p> Adresse : 1, avenue de Bonneville, 43000 Aiguilhe<p>
-     <img src="../cours_dojo.png" alt ="cours dans le dojo">
+    <h2> Dojo Quincieu </h2>
+    <p> Adresse : 1, Avenue de Bonneville, 43000 Aiguilhe<p>
 </div>    
+</div>
 <div class="tarifs">
     <h2>Tarifs</h2>
 <section class="inscription-section">
@@ -71,5 +70,6 @@
 <p> Les prix indiqués ci-dessus comprennent la possibilité de participer à tous les cours correspondant à sa tranche d'âge, la Licence à la FFAAA ainsi que l’assurance et l’adhésion à l’association « Aïkido Le Puy en Velay ». Possibilité d'échelonner le règlement. Tous les chèques devront être remis au moment de l'inscription pour que celle-ci soit effective.
 </p>    
 </div>
+<a href="contact.php" class="btn-inscription">S'inscrire</a>
 </body>
 </html>
