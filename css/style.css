@@ -96,7 +96,7 @@ button {
     margin-left: 50px;
 }
 
-/* MENU */
+/* NAVIGATION */
 .menu {
     display: flex;
     gap: 150px;
@@ -104,20 +104,25 @@ button {
 
 .menu a {
     text-decoration: none;
-    padding-bottom: 5px;
     color: #000;
     font-size: 18px;
     display: inline-block;
     padding: 8px 16px;
-    border-bottom: 2px solid transparent;
+    border-bottom: 1px solid transparent;
     transition: border-color 0.3s;
 }
 
+/* Trait page active*/
+.menu a.actif {
+    border-bottom-color: #2f4f5f;
+}
+
+/* Hover */
 .menu a:hover {
     border-bottom-color: #2f4f5f;
 }
 
-/* ZONE DROITE */
+/* Téléphone - Contact */
 .header-droit {
     display: flex;
     align-items: center;
@@ -125,12 +130,21 @@ button {
     margin-right: 20px;
 }
 
-/* TELEPHONE */
 .phone {
     background-color: #2f4f5f;
     color: white;
     padding: 8px 14px;
+    font-family: Arial, sans-serif;
 }
+
+.contact {
+    background-color: #2f4f5f;
+    color: white;
+    padding: 8px 18px;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
 
 /* BOUTON CONTACT */
 .contact {
@@ -247,6 +261,8 @@ text-align:justify;
     width: 80%;
     text-align: justify;
     justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20pxs;
 }
 
 .container{
@@ -264,11 +280,28 @@ text-align:justify;
     margin-left: 143px;
 }
 
+.info-cours h3, .info-cours p {
+    margin: 0; 
+}
+
 .info-cours {
     width: 80%;
     display: flex;
     flex-direction: column;
-    line-height: 20px;
+    gap: 5px; 
+}
+
+.info-cours p {
+    margin-left: 33px; /* décale texte en dessous titre */
+    margin-top: 0px;
+    margin-bottom: 10px; 
+}
+
+/* Icones */
+.icone {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
 .tarifs {

@@ -19,11 +19,11 @@
             <img src="../img/Cours_prise.png" alt="Cours prise">
         </div>
         <div class="info-cours">
-            <h3>Thomas Gavory</h3>
+            <h3><img src="../img/professeur_icone.png" class="icone">Thomas Gavory</h3>
             <p>6ème DAN d'Aïkido, diplômé d'État.</p> 
-            <h3> Horaires: </h3>
+            <h3><img src="../img/date_icone.png" class="icone"> Horaires: </h3>
             <p>Mardi 19h-21h <br>Jeudi 19h-21h</p>
-            <h3> Dojo Quincieu </h3>
+            <h3><img src="../img/localisation_icone.png" class="icone"> Dojo Quincieu </h3>
             <p> Adresse : 1, Avenue de Bonneville, 43000 Aiguilhe<p>
         </div>    
     </div>
