@@ -1,9 +1,27 @@
+@font-face {
+  font-family: "Cabinet";
+  src: url("../fonts/CabinetGrotesk-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clash";
+  src: url("../fonts/ClashDisplay-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body{
     display:flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
     font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-family: "Cabinet" , sans-serif;
 }
 /*contact*/
 label{
@@ -43,6 +61,9 @@ button {
     padding: 20px 40px;
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* LOGO */
@@ -62,14 +83,27 @@ button {
     font-size: 18px;
     display: inline-block;
     padding: 8px 16px;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .menu a:hover {
     background-color: #2f4f5f;
-    border-radius: 5px;
+    border-radius: 20px;
     color: white;
     padding: 8px 16px;
+    color: black;
+  text-decoration: none;
+  padding: 8px 16px;
+  background-image: linear-gradient(#2f4f5f, #2f4f5f);
+  background-size: 0% 3px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #2f4f5f;
+  background-size: 100% 3px;
 }
 
 /* ZONE DROITE */
@@ -84,7 +118,7 @@ button {
     background-color: #2f4f5f;
     color: white;
     padding: 8px 14px;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 /* BOUTON CONTACT */
@@ -92,9 +126,72 @@ button {
     background-color: #2f4f5f;
     color: white;
     padding: 8px 18px;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
+/* PAGE HISTOIRE */
+
+
+
+
+/*FOOTER*/
+footer {
+  display: flex;
+  align-items: flex-start; 
+  flex-direction: row;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  gap: 30px; 
+}
+.footer-logo img {
+  width: 60px;
+  display: block;
+}
+
+.footer-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: #202020;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+/* --- LE HOVER --- */
+.footer-menu a:hover {
+  color: #2F4F5F;
+}
+
+/* --- LE BLOC DE DROITE --- */
+.footer-droite {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.footer-address p {
+  margin: 0; 
+  margin-bottom: 15px;
+}
+
+.footer-rs {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-rs img {
+  width: 32px;
+  height: auto;
+}
 
 /* PAGE HISTOIRE */
 .histoire {
@@ -108,7 +205,6 @@ button {
     justify-content: space-around;
     text-align: center;
     margin-bottom: 50px;
-    font-family: "korosu";
 }
 
 .aikido-mots h2 {
@@ -121,13 +217,11 @@ button {
     font-size: 14px;
 
 }
-
-
 h3 {
-    font-family: 30px;
     text-align: center;
     justify-content: space-around;
 }
+
 .fondateur-contenu {
     display: flex;
     gap: 40px;
@@ -146,72 +240,51 @@ text-align:justify;
 text-align:justify;
 }
 
-/* Cartes grades */
-/* Structure grille */
+/* Cartes */
+
+.grades-section {
+    margin: 80px 0;
+}
+
+/* Grille */
 .grade-grille {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-    gap: 30px; /* Espace entre les cartes */
-    padding: 20px;
-    max-width: 1500px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
 }
 
-/* Style Carte */
+/* Carte */
 .carte {
-    background-color: #f4f4f4;
-    border-radius: 20px;
-    text-align: center;
-    transition: transform 0.3s ease;
-
+    background-color: #000; 
+    color: #fff; 
+    border: 1px solid #000;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease; /* transition pour hover */
 }
 
+/* Hover */
 .carte:hover {
-    transform: translateY(-5px);
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.03);
 }
 
-/* En-tête avec l'arrondi */
+/* Titre */
 .carte-header {
-    background-color: #2f4f5f; 
-    color: #fff; /* Texte Blanc */
-    padding: 40px 20px;
-    border-bottom-left-radius: 50% 30%;
-    border-bottom-right-radius: 50% 30%;
+    margin-bottom: 20px;
 }
 
 .carte-header h3 {
-    margin: 0;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-/* Corps de la carte */
-.carte-body {
-    padding: 20px;
-    color: #2f4f5f;
-    
+/* Texte */
+.carte-body p {
+    font-size: 14px;
 }
-
-
-main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-.cartestage{
-    background-color: lightgrey;
-    text-align: left;
-} 
-
-.cartestage h3 {
-    text-align: left;
-    color: black;
-    text-decoration: none;
-}
-
-.cartestage p {
-    color:#000;
-    text-decoration: none;
-}
-
-
