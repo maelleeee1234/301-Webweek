@@ -40,7 +40,7 @@ h3 {
 
 p {
     font-family: Arial, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: #000;
 }
 
@@ -245,67 +245,35 @@ text-align:justify;
 /* PAGE COURS */
 .texte_asso{
     width: 80%;
-    text-align: justify
+    text-align: justify;
+    justify-content: center;
 }
 
 .container{
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .image-cours{
     display: flex;
-    height: 300px;
+    height: 400px;
     width: auto;
     justify-content: flex-start;
     margin-left: 143px;
 }
+
 .info-cours {
     width: 80%;
     display: flex;
     flex-direction: column;
-}
-
-/* Inversion pour Horaires (image à gauche) */
-.horaires-cours {
-    flex-direction: row-reverse;
-}
-
-/* Textes */
-.thomas-gavory-cours p,
-.horaires-cours p,
-.Dojo-Quincieu p {
-    max-width: 500px;
-    line-height: 1.4;
-    text-align:justify;
-
-}
-
-/* Titres */
-.thomas-gavory-cours h3,
-.horaires-cours h3,
-.Dojo-Quincieu h2 {
-    margin-bottom: 10px;
-}
-/* Images */
-.thomas-gavory-cours img,
-.horaires-cours img,
-.Dojo-Quincieu img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
+    line-height: 20px;
 }
 
 .tarifs {
     width: 90%;
-    margin: 100px auto;
     text-align: center;
-}
-
-.tarifs > p {
-    max-width: 900px;
-    margin: 40px auto 0;
-    font-size: 16px;
-    line-height: 1.5;
 }
 
 /* S'nscrire */
@@ -320,13 +288,6 @@ text-align:justify;
     font-size: 16px;
 }
 
-
-
-/* Cartes */
-.grades-section {
-    margin: 80px 0;
-}
-
 /* Grille */
 .grade-grille {
     display: grid;
@@ -336,9 +297,13 @@ text-align:justify;
     margin-top: 40px;
 }
 
-/* Carte */
-.carte {
-    color: #fff; 
+.tarif-grille {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+    justify-content: space-around;
 }
 
 .carte h2,
@@ -351,6 +316,7 @@ text-align:justify;
 .carte:hover p {
     color: #000;
 }
+
 .carte {
     background-color: #000; 
     border: 1px solid #000;
