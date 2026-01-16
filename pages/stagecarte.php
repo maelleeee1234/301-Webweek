@@ -1,6 +1,5 @@
 <?php 
 include '../includes/header.php';
-include '../includes/footer.php';
 include_once '../classes/database.php';
 include_once '../classes/stage.php';
 include_once '../classes/lieu.php';
@@ -22,6 +21,13 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
 </head>
 <body>
     <main>
+        <div class="search-container">
+            <input type="text" id="inputRecherche" placeholder="Rechercher un stage">
+        </div>
+
+    <div id="resultatsRecherche">
+    </div>
+    <div id="listeCompleteStages">
       <?php foreach ($stages as $unStage) : ?>
         <?php 
             // Récupérer le lieu associé à chacun des stages afficher (avec la classe lieu)
@@ -37,7 +43,7 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
         <!-- Afficher les stages--> 
             <div class="cartestage">
                 <img src="<?php echo $unStage->getImage(); ?>" alt="Affiche du stage" />
-                <h3> · <?php echo $unStage->getNom(); ?></h3>
+                <h3><?php echo $unStage->getNom(); ?></h3>
 
                 <p><?php if ($unStage->getDateDebut()===$unStage->getDateFin()) {?>
                     Le <?php echo $unStage->getDateDebut();
@@ -47,11 +53,30 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
                 }?>
                 </p> 
                 <p> 
-                    <?php echo $lieu->getVille(); ?>, 
+                    <?php echo $lieu->getVille(); ?>
                 </p>
             </div>
         </a>
       <?php endforeach; ?>
+      </div>
+<script id="templateressources" type="text/html">
+    {{#stages}}
+    <a href="articlestage.php?id={{id}}">
+        <div class="carte">
+            <img src="{{image}}" alt="Affiche" />
+            <h3> · {{nom}}</h3>
+            <p>{{date}}</p> 
+            <p>{{ville}}</p>
+        </div>
+    </a>
+    {{/stages}}
+</script>
+
+<script src="../js/mustache.min.js"></script>
+<script src="../js/script.js"></script>
     </main> 
 </body>
 </html>
+<?php
+include '../includes/footer.php';
+?>
